@@ -22,7 +22,8 @@ h1, h2, h3, h4, h5, h6, figure, p {
   grid-template-rows: 160px 1fr auto;
   grid-template-columns: 1fr 250px;
   grid-template-areas: "header header" "main aside" "footer footer";
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 .u-layout__header {
   -ms-grid-row: 1;
@@ -183,6 +184,40 @@ h1, h2, h3, h4, h5, h6, figure, p {
 }
 .reference__item--icon img {
   visibility: hidden;
+}
+
+.main {
+  height: 100%;
+}
+.main__container {
+  display: grid;
+  grid-template-columns: minmax(1024px, 1fr);
+  gap: 20px;
+}
+
+.article {
+  position: relative;
+  margin-bottom: 1em;
+}
+.article::before {
+  content: "";
+  height: 4px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #8A2387;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.article__title {
+  margin: 1em 0;
+}
+.article__description {
+  margin-bottom: 1.5em;
 }
 
 .footer {
