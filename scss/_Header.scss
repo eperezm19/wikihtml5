@@ -47,10 +47,22 @@
     list-style: none;
   }
   &__item {
+    position: relative;
     height: inherit;
     padding: 0 22px;
+    &:hover::before {
+      content: "";
+      height: 4px;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #8A2387;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
     a {
-      position: relative;
       display: flex;
       align-items: center;
       height: inherit;
@@ -58,18 +70,6 @@
       font-size: 1em;
       text-transform: uppercase;
       color: $veryDarkBlue;
-      &:hover::before {
-        content: "";
-        height: 4px;
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #8A2387;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      }
     }
   }
 }

@@ -102,20 +102,11 @@ h1, h2, h3, h4, h5, h6, figure, p {
   list-style: none;
 }
 .navbar__item {
+  position: relative;
   height: inherit;
   padding: 0 22px;
 }
-.navbar__item a {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: inherit;
-  text-decoration: none;
-  font-size: 1em;
-  text-transform: uppercase;
-  color: #1f2d41;
-}
-.navbar__item a:hover::before {
+.navbar__item:hover::before {
   content: "";
   height: 4px;
   display: block;
@@ -128,4 +119,13 @@ h1, h2, h3, h4, h5, h6, figure, p {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #F27121, #E94057, #8A2387);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.navbar__item a {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #1f2d41;
 }
