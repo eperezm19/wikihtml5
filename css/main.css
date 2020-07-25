@@ -184,3 +184,15 @@ h1, h2, h3, h4, h5, h6, figure, p {
 .reference__item--icon img {
   visibility: hidden;
 }
+
+.footer {
+  height: 60px;
+  background-color: #e0e0e0;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__description {
+  line-height: 4;
+}

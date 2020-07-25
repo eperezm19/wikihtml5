@@ -1,0 +1,11 @@
+.footer {
+  height: 60px;
+  background-color: $grisSuave;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__description {
+    line-height: 4;
+  }
+}
