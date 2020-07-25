@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Lato|Oswald&display=swap);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, figure, p {
+  margin: 0;
+}
+
+.u-wrapper {
+  padding: 0 1rem;
+}
+
+.u-layout {
+  display: grid;
+  grid-template-rows: 160px 1fr auto;
+  grid-template-columns: 1fr 250px;
+  grid-template-areas: "header header" "main aside" "footer footer";
+  height: 100vh;
+}
+.u-layout__header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+.u-layout__main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  border: 1px solid #666666;
+}
+.u-layout__aside {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: aside;
+  border: 1px solid #666666;
+}
+.u-layout__footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  border: 1px solid #666666;
+}
+
+.header {
+  background: #8A2387;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.header__top {
+  height: 100px;
+}
+.header__top--container {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+.header__top--img {
+  height: 100px;
+  width: 100px;
+  padding: 1rem;
+}
+.header__top--img img {
+  height: 100%;
+  width: 100%;
+}
+.header__top--titles {
+  justify-self: center;
+  align-self: center;
+}
+.header__top--titles h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+}
+.header__top--titles p {
+  font-size: 1.2em;
+  color: #1f2d41;
+}
+
+.navbar {
+  height: 60px;
+  width: 100%;
+  background-color: #fff;
+}
+.navbar__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar__item {
+  height: inherit;
+  padding: 0 22px;
+}
+.navbar__item a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: inherit;
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #1f2d41;
+}
+.navbar__item a:hover::before {
+  content: "";
+  height: 4px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #8A2387;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

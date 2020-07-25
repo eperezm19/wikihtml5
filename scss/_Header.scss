@@ -1,0 +1,75 @@
+.header {
+  background: #8A2387;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  &__top {
+    height: 100px;
+    &--container {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+    }
+    &--img {
+      height: 100px;
+      width: 100px;
+      padding: 1rem;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &--titles {
+      justify-self: center;
+      align-self: center;
+      h1 {
+        font-family: $Fuente2;
+        font-size: 2.5em;
+        color: $color-white;
+      }
+      p {
+        font-size: 1.2em;
+        color: $veryDarkBlue;
+      }
+    }
+  }
+}
+
+.navbar {
+  height: 60px;
+  width: 100%;
+  background-color: $color-white;
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    height: inherit;
+    padding: 0 22px;
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: inherit;
+      text-decoration: none;
+      font-size: 1em;
+      text-transform: uppercase;
+      color: $veryDarkBlue;
+      &:hover::before {
+        content: "";
+        height: 4px;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #8A2387;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+    }
+  }
+}

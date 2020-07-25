@@ -1,0 +1,17 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: $Fuente1;
+}
+
+h1, h2, h3, h4, h5, h6, figure, p {
+  margin: 0;
+}
+
+.u-wrapper {
+  padding: 0 1rem;
+}
