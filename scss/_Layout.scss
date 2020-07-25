@@ -11,14 +11,11 @@
   }
   &__main {
     grid-area: main;
-    border: 1px solid $veryDarkGray;
   }
   &__aside {
     grid-area: aside;
-    border: 1px solid $veryDarkGray;
   }
   &__footer {
     grid-area: footer;
-    border: 1px solid $veryDarkGray;
   }
 }

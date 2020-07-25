@@ -1,0 +1,54 @@
+.aside {
+  height: 100%;
+  border-left: 1px solid $grisSuave;
+  &__title {
+    margin: 1em 0;
+    text-align: center;
+  }
+}
+
+.reference {
+  display: grid;
+  gap: 1rem;
+  &__item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    // justify-items: center;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: $veryDarkBlue;
+    &:hover {
+      font-weight: bold;
+    }
+    &:hover img {
+      visibility: visible;
+    }
+    &:hover &--circle {
+      background: #8A2387;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    &--circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: $grisSuave;
+    }
+    &--icon {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      height: 38px;
+      width: 38px;
+      background-color:$color-white;
+      border-radius: 50%;
+      img {
+        visibility: hidden;
+      }
+    }
+  }
+}

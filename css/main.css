@@ -34,20 +34,17 @@ h1, h2, h3, h4, h5, h6, figure, p {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: main;
-  border: 1px solid #666666;
 }
 .u-layout__aside {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: aside;
-  border: 1px solid #666666;
 }
 .u-layout__footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: footer;
-  border: 1px solid #666666;
 }
 
 .header {
@@ -90,6 +87,8 @@ h1, h2, h3, h4, h5, h6, figure, p {
 .navbar {
   height: 60px;
   width: 100%;
+  box-shadow: 0px 2px 5px 0px #8c8c8c;
+  box-sizing: border-box;
   background-color: #fff;
 }
 .navbar__menu {
@@ -128,4 +127,60 @@ h1, h2, h3, h4, h5, h6, figure, p {
   font-size: 1em;
   text-transform: uppercase;
   color: #1f2d41;
+}
+
+.aside {
+  height: 100%;
+  border-left: 1px solid #e0e0e0;
+}
+.aside__title {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.reference {
+  display: grid;
+  gap: 1rem;
+}
+.reference__item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #1f2d41;
+}
+.reference__item:hover {
+  font-weight: bold;
+}
+.reference__item:hover img {
+  visibility: visible;
+}
+.reference__item:hover .reference__item--circle {
+  background: #8A2387;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F27121, #E94057, #8A2387);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.reference__item--circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+}
+.reference__item--icon {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 38px;
+  width: 38px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.reference__item--icon img {
+  visibility: hidden;
 }
